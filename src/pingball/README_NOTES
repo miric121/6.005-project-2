@@ -1,0 +1,74 @@
+
+
+
+Important PLEASE READ:
+	1. Please throw new NotImplementedException() for unimplemented functions
+	2. Please don't write again class methods which come from interface! 
+			They are redundant and it is better to have more specific specs for interface instead.
+	
+	3. Need test cases for phase1!!!
+	4. Need to improve our wording of specs. 
+
+
+	
+Current Design:
+
+	Ball (iveel)
+	Wall (iveel)
+	Board (iveel)
+
+	Gadget (miri) :
+		Absorber (miri)
+		
+		SquareBumber (miri)
+		CircleBumber (miri)  
+		TriangleBumber (miri) orientation??
+		
+		Flipper abstract class: (iveel)
+			LeftFlipper (iveel)
+			RightFlipper (iveel)
+			
+	enum WallType  (iveel)
+	enum Orientatin (iveel)
+	
+++++++++++++++++++++++++TEST CASES!!! +++++++++++++++++++++++++++++++++++++
+	Ball (dang)
+	Wall (dang)
+	Board (iveel)
+
+	Gadget :					
+		Absorber (miri)
+		
+		SquareBumber (miri)
+		CircleBumber (miri)  
+		TriangleBumber (miri) orientation??
+		
+		Flipper abstract class: (dang)
+			LeftFlipper (dang)
+			RightFlipper (dang)
+			
+>>>>>>>>>>>>>>>>>>>>>TO UNDERSTAND OUR FRAMEWORK >>>>>> PLEASE READ >>>>>>>>>>>>>>>>>>>>
+
+In the main function:
+While (true):
+      TextMode(0.005);
+      
+In board class:
+public String TextMode(time){
+		board.simulate(time);
+		system stop for time
+		System.out.println( String(Board) )
+	}
+			
+ simulate(timeToRate){
+		t <-- find the closest time first collision would happen (ball and X)
+		
+		if ( t < timeToRate ):
+		     collision happen between ball and X
+		     update(other balls for t time change)
+			 board.simulate(timeToRate-t)
+		     
+		else:
+		     update(all balls for timeToRate)
+		
+
